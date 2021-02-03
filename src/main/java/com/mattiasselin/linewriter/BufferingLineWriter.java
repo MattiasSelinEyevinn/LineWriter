@@ -57,7 +57,7 @@ public class BufferingLineWriter implements ILineWriter, ILineSource {
 
 	@Override
 	public ILineWriter indented() {
-		BufferingLineWriter indentedWriter = new BufferingLineWriter(idGenerator, bufferedCommands);
+		BufferingLineWriter indentedWriter = newBufferingLineWriter(idGenerator, bufferedCommands);
 		final String indentedId = indentedWriter.id;
 		bufferedCommands.add(new ICommand() {
 			@Override
@@ -67,6 +67,10 @@ public class BufferingLineWriter implements ILineWriter, ILineSource {
 			}
 		});
 		return indentedWriter;
+	}
+	
+	protected BufferingLineWriter newBufferingLineWriter(IIdGenerator idGenerator, List<ICommand> bufferedCommands) {
+		return new BufferingLineWriter(idGenerator, bufferedCommands);
 	}
 
 	@Override
