@@ -109,7 +109,7 @@ public class BufferingLineWriter implements ILineWriter, ILineSource {
 		ILineWriter getImplementation(String id);
 	}
 	
-	private interface ICommand {
+	protected interface ICommand {
 		void execute(IExecutionContext context);
 	}
 	
@@ -141,7 +141,7 @@ public class BufferingLineWriter implements ILineWriter, ILineSource {
 		}
 	}
 	
-	private interface IIdGenerator {
+	protected interface IIdGenerator {
 		String newId();
 	} 
 }
