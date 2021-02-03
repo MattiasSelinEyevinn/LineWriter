@@ -1,10 +1,9 @@
+ package com.mattiasselin.linewriter;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
-import com.mattiasselin.linewriter.ILineSource;
-import com.mattiasselin.linewriter.ILineWriter;
 
 public class BufferingLineWriter implements ILineWriter, ILineSource {
 	private final IIdGenerator idGenerator;
