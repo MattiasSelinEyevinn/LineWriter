@@ -20,7 +20,7 @@ public class BufferingLineWriter implements ILineWriter, ILineSource {
 		}, new ArrayList<ICommand>());
 	}
 	
-	private BufferingLineWriter(IIdGenerator idGenerator, List<ICommand> bufferedCommands) {
+	protected BufferingLineWriter(IIdGenerator idGenerator, List<ICommand> bufferedCommands) {
 		this.idGenerator = idGenerator;
 		this.bufferedCommands = bufferedCommands;
 		this.id = idGenerator.newId();
