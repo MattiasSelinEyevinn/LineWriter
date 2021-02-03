@@ -1,4 +1,4 @@
- package com.mattiasselin.linewriter;
+package com.mattiasselin.linewriter;
 
 import java.util.ArrayList;
 import java.util.HashMap;
